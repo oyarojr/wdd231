@@ -1,0 +1,90 @@
+[
+    {
+        "name": "Safaricom PLC",
+        "address": "Safaricom House, Waiyaki Way",
+        "city": "Nairobi",
+        "phone": "+254 722 000000",
+        "website": "https://www.safaricom.co.ke",
+        "image": "safaricom.webp",
+        "membershipLevel": 3,
+        "description": "Leading telecommunications company in Kenya",
+        "founded": "1997"
+    },
+    {
+        "name": "Kenya Commercial Bank",
+        "address": "Kencom House, Moi Avenue",
+        "city": "Nairobi",
+        "phone": "+254 711 087000",
+        "website": "https://www.kcbbankgroup.com",
+        "image": "kcb.webp",
+        "membershipLevel": 3,
+        "description": "Premier banking institution in East Africa",
+        "founded": "1896"
+    },
+    {
+        "name": "Equity Bank",
+        "address": "Equity Centre, Hospital Road",
+        "city": "Nairobi",
+        "phone": "+254 763 063000",
+        "website": "https://www.equitybank.co.ke",
+        "image": "equity.webp",
+        "membershipLevel": 2,
+        "description": "Innovative financial services provider",
+        "founded": "1984"
+    },
+    {
+        "name": "Nairobi Coffee Exchange",
+        "address": "Wakulima Market, Haile Selassie Avenue",
+        "city": "Nairobi",
+        "phone": "+254 720 555123",
+        "website": "https://www.nairobicoffee.co.ke",
+        "image": "coffee.webp",
+        "membershipLevel": 2,
+        "description": "Premium coffee trading and distribution",
+        "founded": "2005"
+    },
+    {
+        "name": "Tusker Breweries Ltd",
+        "address": "Thika Road Industrial Area",
+        "city": "Nairobi",
+        "phone": "+254 733 456789",
+        "website": "https://www.tusker.co.ke",
+        "image": "tusker.webp",
+        "membershipLevel": 3,
+        "description": "Iconic Kenyan beer brand and brewery",
+        "founded": "1922"
+    },
+    {
+        "name": "Wananchi Group",
+        "address": "Westlands Business Park",
+        "city": "Nairobi",
+        "phone": "+254 709 961000",
+        "website": "https://www.wananchi.com",
+        "image": "wananchi.webp",
+        "membershipLevel": 2,
+        "description": "Leading cable and broadband provider",
+        "founded": "1999"
+    },
+    {
+        "name": "Nakumatt Holdings",
+        "address": "Kimathi Street, CBD",
+        "city": "Nairobi",
+        "phone": "+254 722 333444",
+        "website": "https://www.nakumatt.co.ke",
+        "image": "nakumatt.webp",
+        "membershipLevel": 1,
+        "description": "Retail supermarket chain",
+        "founded": "1987"
+    },
+    {
+        "name": "East African Breweries",
+        "address": "Ruaraka, Thika Road",
+        "city": "Nairobi",
+        "phone": "+254 711 024000",
+        "website": "https://www.eabl.com",
+        "image": "eabl.webp",
+        "membershipLevel": 3,
+        "description": "Regional beverage manufacturing leader",
+        "founded": "1922"
+    }
+]
