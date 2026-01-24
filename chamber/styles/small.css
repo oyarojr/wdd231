@@ -1,42 +1,37 @@
 /* ========================================
-   CSS VARIABLES - Design System
+   CSS VARIABLES
    ======================================== */
 :root {
-    /* Color Palette - Sophisticated Corporate */
+    /* Colors */
     --primary-color: #1a4d2e;
     --primary-dark: #0f2e1c;
     --primary-light: #2d7a4a;
     --secondary-color: #c8a561;
-    --secondary-dark: #a68644;
     --accent-color: #e94b3c;
-
-    /* Neutrals */
-    --background-color: #fafaf8;
-    --surface-color: #ffffff;
+    --bg-color: #fafaf8;
+    --surface-color: #fff;
     --text-color: #1a1a1a;
     --text-light: #5a5a5a;
     --border-color: #e0dfd8;
-    --shadow-light: rgba(26, 77, 46, 0.08);
-    --shadow-medium: rgba(26, 77, 46, 0.15);
-    --shadow-heavy: rgba(26, 77, 46, 0.25);
-
+    
+    /* Shadows */
+    --shadow: 0 2px 12px rgba(26, 77, 46, 0.08);
+    --shadow-hover: 0 8px 24px rgba(26, 77, 46, 0.15);
+    
     /* Typography */
     --font-display: 'Playfair Display', serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-mono: 'IBM Plex Mono', monospace;
-
-    /* Spacing Scale */
+    
+    /* Spacing */
     --space-xs: 0.5rem;
     --space-sm: 0.875rem;
     --space-md: 1.25rem;
     --space-lg: 2rem;
     --space-xl: 3rem;
     --space-xxl: 4.5rem;
-
+    
     /* Transitions */
-    --transition-fast: 150ms ease-in-out;
-    --transition-base: 250ms ease-in-out;
-    --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: 250ms ease-in-out;
 }
 
 /* ========================================
@@ -46,45 +41,27 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: var(--bg-color);
     margin: 0;
-    padding: 0;
     overflow-x: hidden;
 }
 
 /* ========================================
-   HEADER STYLES
+   HEADER
    ======================================== */
 header {
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
-    color: white;
-    padding: var(--space-md) var(--space-md);
-    box-shadow: 0 4px 20px var(--shadow-medium);
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    color: var(--surface-color);
+    padding: var(--space-md);
+    box-shadow: var(--shadow);
     position: sticky;
     top: 0;
     z-index: 1000;
-    animation: slideDown 0.4s ease-out;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
 .header-container {
@@ -113,14 +90,14 @@ header {
     height: 50px;
     object-fit: contain;
     border-radius: 8px;
-    background: white;
+    background: var(--surface-color);
     padding: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    transition: transform var(--transition-base);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition);
 }
 
 .logo:hover {
-    transform: scale(1.05) rotate(2deg);
+    transform: scale(1.05);
 }
 
 .site-title {
@@ -128,7 +105,6 @@ header {
     font-size: 1.25rem;
     font-weight: 700;
     margin: 0;
-    letter-spacing: -0.02em;
     line-height: 1.2;
 }
 
@@ -142,21 +118,19 @@ header {
     cursor: pointer;
     border-radius: 6px;
     margin-left: auto;
-    transition: all var(--transition-base);
+    transition: all var(--transition);
 }
 
 .hamburger:hover {
     background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .hamburger span {
-    display: block;
     width: 25px;
     height: 3px;
-    background: white;
+    background: var(--surface-color);
     border-radius: 2px;
-    transition: all var(--transition-base);
+    transition: all var(--transition);
 }
 
 .hamburger.active span:nth-child(1) {
@@ -174,9 +148,9 @@ header {
 /* Navigation */
 .navigation {
     display: none;
-    overflow: hidden;
     max-height: 0;
-    transition: max-height var(--transition-slow);
+    overflow: hidden;
+    transition: max-height 400ms ease;
 }
 
 .navigation.active {
@@ -190,7 +164,6 @@ nav ul {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0;
     background: rgba(255, 255, 255, 0.08);
     border-radius: 8px;
     overflow: hidden;
@@ -206,13 +179,12 @@ nav li:last-child {
 
 nav a {
     display: block;
-    color: white;
+    color: var(--surface-color);
     text-decoration: none;
-    padding: var(--space-md) var(--space-md);
+    padding: var(--space-md);
     font-weight: 500;
-    transition: all var(--transition-base);
+    transition: all var(--transition);
     position: relative;
-    overflow: hidden;
 }
 
 nav a::before {
@@ -224,16 +196,14 @@ nav a::before {
     width: 4px;
     background: var(--secondary-color);
     transform: translateX(-100%);
-    transition: transform var(--transition-base);
+    transition: transform var(--transition);
 }
 
-nav a:hover::before,
-nav a:focus::before {
+nav a:hover::before {
     transform: translateX(0);
 }
 
-nav a:hover,
-nav a:focus {
+nav a:hover {
     background: rgba(255, 255, 255, 0.12);
     padding-left: calc(var(--space-md) + 8px);
 }
@@ -256,28 +226,14 @@ main {
 .page-header {
     text-align: center;
     margin-bottom: var(--space-xl);
-    animation: fadeInUp 0.6s ease-out 0.2s both;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.page-header h1 {
+.page-header h2 {
     font-family: var(--font-display);
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--primary-dark);
     margin: 0 0 var(--space-sm) 0;
-    letter-spacing: -0.03em;
     line-height: 1.1;
 }
 
@@ -296,19 +252,17 @@ main {
     justify-content: center;
     gap: var(--space-sm);
     margin-bottom: var(--space-lg);
-    animation: fadeInUp 0.6s ease-out 0.3s both;
 }
 
 .view-btn {
-    background: white;
+    background: var(--surface-color);
     border: 2px solid var(--border-color);
     padding: var(--space-sm) var(--space-md);
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
-    font-family: var(--font-body);
     color: var(--text-color);
-    transition: all var(--transition-base);
+    transition: all var(--transition);
     display: flex;
     align-items: center;
     gap: var(--space-xs);
@@ -318,16 +272,14 @@ main {
 .view-btn:hover {
     border-color: var(--primary-color);
     background: var(--primary-light);
-    color: white;
+    color: var(--surface-color);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px var(--shadow-medium);
 }
 
 .view-btn.active {
     background: var(--primary-color);
-    color: white;
+    color: var(--surface-color);
     border-color: var(--primary-color);
-    box-shadow: 0 2px 8px var(--shadow-medium);
 }
 
 .view-btn svg {
@@ -336,24 +288,22 @@ main {
 }
 
 /* ========================================
-   MEMBER DIRECTORY - GRID VIEW
+   MEMBER CARDS
    ======================================== */
 .member-directory {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-lg);
-    animation: fadeInUp 0.6s ease-out 0.4s both;
 }
 
 .member-card {
     background: var(--surface-color);
     border-radius: 12px;
     padding: var(--space-lg);
-    box-shadow: 0 2px 12px var(--shadow-light);
-    transition: all var(--transition-base);
+    box-shadow: var(--shadow);
+    transition: all var(--transition);
     border: 1px solid var(--border-color);
     position: relative;
-    overflow: hidden;
 }
 
 .member-card::before {
@@ -365,7 +315,7 @@ main {
     height: 4px;
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
     transform: scaleX(0);
-    transition: transform var(--transition-base);
+    transition: transform var(--transition);
 }
 
 .member-card:hover::before {
@@ -374,8 +324,7 @@ main {
 
 .member-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px var(--shadow-medium);
-    border-color: var(--primary-light);
+    box-shadow: var(--shadow-hover);
 }
 
 .membership-badge {
@@ -387,7 +336,6 @@ main {
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
 }
 
 .membership-badge.gold {
@@ -414,15 +362,12 @@ main {
     align-items: center;
     justify-content: center;
     margin-bottom: var(--space-md);
-    overflow: hidden;
-    position: relative;
 }
 
 .member-image {
     width: 80px;
     height: 80px;
     object-fit: contain;
-    filter: brightness(1.2);
 }
 
 .member-image-placeholder {
@@ -436,21 +381,12 @@ main {
     font-weight: 700;
     color: var(--primary-dark);
     margin: 0 0 var(--space-xs) 0;
-    letter-spacing: -0.02em;
 }
 
 .member-info p {
     margin: var(--space-xs) 0;
     color: var(--text-light);
     font-size: 0.95rem;
-    display: flex;
-    align-items: center;
-    gap: var(--space-xs);
-}
-
-.member-info p strong {
-    color: var(--text-color);
-    font-weight: 600;
 }
 
 .member-link {
@@ -458,21 +394,18 @@ main {
     margin-top: var(--space-md);
     padding: var(--space-sm) var(--space-md);
     background: var(--primary-color);
-    color: white;
+    color: var(--surface-color);
     text-decoration: none;
     border-radius: 6px;
     font-weight: 600;
-    transition: all var(--transition-base);
+    transition: all var(--transition);
 }
 
 .member-link:hover {
     background: var(--primary-dark);
-    transform: translateX(4px);
 }
 
-/* ========================================
-   MEMBER DIRECTORY - LIST VIEW
-   ======================================== */
+/* List View */
 .member-directory.list-view {
     display: flex;
     flex-direction: column;
@@ -500,17 +433,10 @@ main {
 
 .member-directory.list-view .member-info h2 {
     font-size: 1.25rem;
-    margin-bottom: 0.25rem;
-}
-
-.member-directory.list-view .member-info p {
-    font-size: 0.875rem;
-    margin: 0.25rem 0;
 }
 
 .member-directory.list-view .membership-badge {
     position: static;
-    display: inline-block;
     margin-top: var(--space-xs);
 }
 
@@ -518,18 +444,10 @@ main {
    FOOTER
    ======================================== */
 footer {
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    color: var(--surface-color);
     padding: var(--space-xl) var(--space-md);
     margin-top: var(--space-xxl);
-}
-
-.footer-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
 }
 
 .footer-section h3 {
@@ -546,9 +464,9 @@ footer {
 }
 
 .footer-section a {
-    color: white;
+    color: var(--surface-color);
     text-decoration: none;
-    transition: color var(--transition-base);
+    transition: color var(--transition);
 }
 
 .footer-section a:hover {
@@ -569,16 +487,13 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    text-decoration: none;
-    transition: all var(--transition-base);
-    font-size: 1.25rem;
+    color: var(--surface-color);
+    transition: all var(--transition);
 }
 
 .social-link:hover {
     background: var(--secondary-color);
     transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .footer-bottom {
@@ -588,10 +503,6 @@ footer {
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
     font-size: 0.875rem;
-}
-
-.footer-bottom p {
-    margin: var(--space-xs) 0;
 }
 
 /* ========================================
@@ -616,26 +527,5 @@ footer {
 }
 
 @keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* ========================================
-   UTILITY CLASSES
-   ======================================== */
-.hidden {
-    display: none !important;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.mt-lg {
-    margin-top: var(--space-lg);
-}
-
-.mb-lg {
-    margin-bottom: var(--space-lg);
+    to { transform: rotate(360deg); }
 }
