@@ -1,7 +1,7 @@
 /* ========================================
-   TABLET & DESKTOP (768px+)
+   TABLET & UP (768px+)
    ======================================== */
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .header-container {
         flex-direction: row;
         justify-content: space-between;
@@ -37,7 +37,7 @@
 
     nav li {
         border-bottom: none;
-        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-right: 1px solid #fff3;
     }
 
     nav li:last-child {
@@ -45,7 +45,7 @@
     }
 
     nav a {
-        padding: var(--space-sm) var(--space-md);
+        padding: var(--space-sm) var(--space);
     }
 
     nav a::before {
@@ -56,17 +56,13 @@
         transform: translateY(100%);
     }
 
-    nav a:hover::before {
-        transform: translateY(0);
-    }
-
     nav a:hover {
-        padding-left: var(--space-md);
+        padding-left: var(--space);
         background: transparent;
     }
 
     main {
-        padding: var(--space-xxl) var(--space-lg);
+        padding: 4.5rem var(--space-lg);
     }
 
     .page-header h2 {
@@ -88,9 +84,9 @@
 }
 
 /* ========================================
-   LARGE DESKTOP (1024px+)
+   DESKTOP (1024px+)
    ======================================== */
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
     body {
         font-size: 1.0625rem;
     }
@@ -142,9 +138,9 @@
 }
 
 /* ========================================
-   EXTRA LARGE (1440px+)
+   LARGE (1440px+)
    ======================================== */
-@media screen and (min-width: 1440px) {
+@media (min-width: 1440px) {
     .page-header h2 {
         font-size: 4.5rem;
     }
@@ -154,12 +150,12 @@
     }
 
     main {
-        padding: var(--space-xxl) var(--space-xl);
+        padding: 4.5rem var(--space-xl);
     }
 }
 
 /* ========================================
-   ACCESSIBILITY
+   ACCESSIBILITY & PRINT
    ======================================== */
 @media (prefers-reduced-motion: reduce) {
 
@@ -167,14 +163,10 @@
     *::before,
     *::after {
         animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
 }
 
-/* ========================================
-   PRINT
-   ======================================== */
 @media print {
 
     header,
@@ -192,6 +184,6 @@
     }
 
     body {
-        background: var(--surface-color);
+        background: var(--surface);
     }
 }
