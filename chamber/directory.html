@@ -5,53 +5,277 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+    <!-- Primary Meta Tags -->
     <title>Member Directory - Nairobi Chamber of Commerce</title>
     <meta name="description"
         content="Browse our directory of member businesses. Connecting businesses, driving growth, and shaping Nairobi's commercial future.">
     <meta name="author" content="Daniel Oyaro">
     <meta name="keywords" content="Nairobi, Chamber of Commerce, Business Directory, Kenya Business, Member Directory">
 
-
+    <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Member Directory - Nairobi Chamber of Commerce">
     <meta property="og:description"
         content="Connecting businesses, driving growth, and shaping Nairobi's commercial future. Browse our member directory.">
-    <meta property="og:image" content="https://oyarojr.github.io/wdd231/chamber/images/nairobi-choc-og.png">
-    <meta property="og:url" content="https://oyarojr.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image" content="https://oyarojr.github.io/chamber/images/nairobi-choc-og.png">
+    <meta property="og:url" content="https://oyarojr.github.io/chamber/directory.html">
     <meta property="og:site_name" content="Nairobi Chamber of Commerce">
 
+    <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Member Directory - Nairobi Chamber of Commerce">
     <meta name="twitter:description"
         content="Connecting businesses, driving growth, and shaping Nairobi's commercial future.">
-    <meta name="twitter:image" content="https://oyarojr.github.io/wdd231/chamber/images/nairobi-choc-og.png">
+    <meta name="twitter:image" content="https://oyarojr.github.io/chamber/images/nairobi-choc-og.png">
 
+    <!-- Critical CSS Inlined for LCP -->
+    <style>
+        :root {
+            --primary: #1a4d2e;
+            --primary-dark: #0f2e1c;
+            --primary-light: #2d7a4a;
+            --secondary: #c8a561;
+            --bg: #fafaf8;
+            --surface: #fff;
+            --text: #1a1a1a;
+            --text-light: #5a5a5a;
+            --border: #e0dfd8;
+            --shadow: 0 2px 12px #1a4d2e14;
+            --shadow-hover: 0 8px 24px #1a4d2e26;
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Inter', -apple-system, sans-serif;
+            --space: 1.25rem;
+            --space-sm: .875rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem
+        }
 
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <!-- Google Fonts Preconnect -->
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            margin: 0
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: var(--surface);
+            padding: var(--space);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100
+        }
+
+        .header-container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space);
+            max-width: 1400px;
+            margin: 0 auto
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            gap: var(--space)
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm)
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            background: var(--surface);
+            padding: 4px
+        }
+
+        .site-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 0
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: #ffffff1a;
+            border: 2px solid #ffffff66;
+            padding: 10px;
+            border-radius: 6px;
+            margin-left: auto
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--surface);
+            border-radius: 2px;
+            transition: transform 250ms
+        }
+
+        .navigation {
+            display: none;
+            max-height: 0;
+            overflow: hidden
+        }
+
+        .navigation.active {
+            display: block;
+            max-height: 400px
+        }
+
+        nav ul {
+            list-style: #0000;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            background: #ffffff1a;
+            border-radius: 8px
+        }
+
+        nav li {
+            border-bottom: 1px solid #ffffff1a
+        }
+
+        nav a {
+            display: block;
+            color: var(--surface);
+            text-decoration: #0000;
+            padding: var(--space);
+            font-weight: 500;
+            position: relative
+        }
+
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: var(--space-xl) var(--space);
+            min-height: 60vh
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: var(--space-xl)
+        }
+
+        .page-header h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin: 0 0 var(--space-sm) 0
+        }
+
+        .loading {
+            text-align: center;
+            padding: 4.5rem 0;
+            color: var(--text-light)
+        }
+
+        @media (min-width:768px) {
+            .header-container {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center
+            }
+
+            .site-title {
+                font-size: 1.5rem
+            }
+
+            .logo {
+                width: 60px;
+                height: 60px
+            }
+
+            .hamburger {
+                display: #0000
+            }
+
+            .navigation {
+                display: block !important;
+                max-height: #0000
+            }
+
+            nav ul {
+                flex-direction: row;
+                background: #0000
+            }
+
+            .page-header h2 {
+                font-size: 3.5rem
+            }
+        }
+    </style>
+
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
-        rel="stylesheet">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
+    <!-- Deferred Non-Critical CSS -->
+    <link rel="preload" href="styles/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="styles/normalize.css">
+    </noscript>
 
+    <link rel="preload" href="styles/small.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="styles/small.css">
+    </noscript>
+
+    <link rel="preload" href="styles/larger.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="styles/larger.css">
+    </noscript>
+
+    <!-- Deferred Google Fonts -->
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <!-- JavaScript -->
     <script defer src="scripts/directory.js"></script>
+
+    <!-- Polyfill for older browsers -->
+    <script>
+        /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+        !function (e) { "use strict"; var t = function (t, n, r, o) { var i, d = e.document, a = d.createElement("link"); if (n) i = n; else { var l = (d.body || d.getElementsByTagName("head")[0]).childNodes; i = l[l.length - 1] } var s = d.styleSheets; if (o) for (var f in o) o.hasOwnProperty(f) && a.setAttribute(f, o[f]); a.rel = "stylesheet", a.href = t, a.media = "only x", function e(t) { if (d.body) return t(); setTimeout(function () { e(t) }) }(function () { i.parentNode.insertBefore(a, n ? i : i.nextSibling) }); var u = function (e) { for (var t = a.href, n = s.length; n--;)if (s[n].href === t) return e(); setTimeout(function () { u(e) }) }; return a.addEventListener && a.addEventListener("load", function () { this.media = r || "all" }), a.onloadcssdefined = u, u(function () { a.media !== r && (a.media = r) }), a }; "undefined" != typeof exports ? exports.loadCSS = t : e.loadCSS = t }("undefined" != typeof global ? global : this);
+    </script>
 </head>
 
 <body>
-
+    <!-- ================================
+         HEADER SECTION
+         ================================ -->
     <header>
         <div class="header-container">
             <div class="header-top">
                 <div class="logo-container">
-                    <img src="images/nairobi-choc.webp" alt="Nairobi Chamber of Commerce Logo" class="logo">
+                    <img src="images/nairobi-choc.webp" alt="Nairobi Chamber of Commerce Logo" class="logo" width="50"
+                        height="50">
                     <h1 class="site-title">Nairobi Chamber of Commerce</h1>
                 </div>
                 <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -74,18 +298,20 @@
         </div>
     </header>
 
-
+    <!-- ================================
+         MAIN CONTENT
+         ================================ -->
     <main>
-
+        <!-- Page Header -->
         <section class="page-header">
             <h2>Member Directory</h2>
             <p>Discover the businesses and organizations that make up our vibrant community</p>
         </section>
 
-
+        <!-- View Controls -->
         <div class="view-controls">
             <button id="gridView" class="view-btn active" aria-label="Switch to grid view">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
                     <rect x="3" y="3" width="7" height="7"></rect>
                     <rect x="14" y="3" width="7" height="7"></rect>
                     <rect x="14" y="14" width="7" height="7"></rect>
@@ -94,7 +320,7 @@
                 Grid
             </button>
             <button id="listView" class="view-btn" aria-label="Switch to list view">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
                     <line x1="8" y1="6" x2="21" y2="6"></line>
                     <line x1="8" y1="12" x2="21" y2="12"></line>
                     <line x1="8" y1="18" x2="21" y2="18"></line>
@@ -106,13 +332,18 @@
             </button>
         </div>
 
+        <!-- Member Directory Container -->
         <section id="memberDirectory" class="member-directory" aria-label="Member directory listing">
+            <!-- Member cards will be dynamically inserted here by JavaScript -->
+            <div class="loading">Loading members...</div>
         </section>
     </main>
 
-
+    <!-- ================================
+         FOOTER SECTION
+         ================================ -->
     <footer>
-
+        <!-- Contact Information -->
         <div class="footer-section">
             <h3>Nairobi Chamber of Commerce</h3>
             <p>Utalii House, 10th Floor<br>
@@ -123,7 +354,7 @@
             <p><a href="tel:+254202219458">+254 20 221 9458</a></p>
         </div>
 
-
+        <!-- Quick Links -->
         <div class="footer-section">
             <h3>Quick Links</h3>
             <p><a href="index.html">Home</a></p>
@@ -161,7 +392,7 @@
             </div>
         </div>
 
-
+        <!-- Footer Bottom -->
         <div class="footer-bottom">
             <p>&copy; <span id="copyrightYear">2026</span> Nairobi Chamber of Commerce. All rights reserved.</p>
             <p>WDD 231 - Daniel Oyaro</p>
