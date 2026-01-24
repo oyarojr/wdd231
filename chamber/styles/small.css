@@ -88,10 +88,9 @@ header {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    background: #fff1;
-    border: 2px solid #fff4;
+    background: #ffffff1a;
+    border: 2px solid #ffffff66;
     padding: 10px;
-    cursor: pointer;
     border-radius: 6px;
     margin-left: auto;
 }
@@ -128,27 +127,27 @@ header {
 }
 
 nav ul {
-    list-style: none;
+    list-style: #0000;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
-    background: #fff1;
+    background: #ffffff1a;
     border-radius: 8px;
 }
 
 nav li {
-    border-bottom: 1px solid #fff1;
+    border-bottom: 1px solid #ffffff1a;
 }
 
 nav li:last-child {
-    border-bottom: none;
+    border-bottom: #0000;
 }
 
 nav a {
     display: block;
     color: var(--surface);
-    text-decoration: none;
+    text-decoration: #0000;
     padding: var(--space);
     font-weight: 500;
     position: relative;
@@ -171,7 +170,7 @@ nav a:hover::before {
 }
 
 nav a:hover {
-    background: #fff2;
+    background: #ffffff33;
     padding-left: calc(var(--space) + 8px);
 }
 
@@ -225,7 +224,6 @@ main {
     border: 2px solid var(--border);
     padding: var(--space-sm) var(--space);
     border-radius: 8px;
-    cursor: pointer;
     font-weight: 600;
     color: var(--text);
     display: flex;
@@ -356,7 +354,7 @@ main {
     padding: var(--space-sm) var(--space);
     background: var(--primary);
     color: var(--surface);
-    text-decoration: none;
+    text-decoration: #0000;
     border-radius: 6px;
     font-weight: 600;
 }
@@ -421,7 +419,7 @@ footer {
 
 .footer-section a {
     color: var(--surface);
-    text-decoration: none;
+    text-decoration: #0000;
 }
 
 .footer-section a:hover {
@@ -437,7 +435,7 @@ footer {
 .social-link {
     width: 45px;
     height: 45px;
-    background: #fff1;
+    background: #ffffff1a;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -452,9 +450,9 @@ footer {
 .footer-bottom {
     margin-top: var(--space-lg);
     padding-top: var(--space-lg);
-    border-top: 1px solid #fff3;
+    border-top: 1px solid #ffffff4d;
     text-align: center;
-    color: #fffc;
+    color: #ffffffcc;
     font-size: 0.875rem;
 }
 

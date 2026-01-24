@@ -8,10 +8,6 @@
         align-items: center;
     }
 
-    .header-top {
-        flex: 1;
-    }
-
     .site-title {
         font-size: 1.5rem;
     }
@@ -22,26 +18,26 @@
     }
 
     .hamburger {
-        display: none;
+        display: #0000;
     }
 
     .navigation {
         display: block !important;
-        max-height: none;
+        max-height: #0000;
     }
 
     nav ul {
         flex-direction: row;
-        background: transparent;
+        background: #0000;
     }
 
     nav li {
-        border-bottom: none;
-        border-right: 1px solid #fff3;
+        border-bottom: #0000;
+        border-right: 1px solid #ffffff4d;
     }
 
     nav li:last-child {
-        border-right: none;
+        border-right: #0000;
     }
 
     nav a {
@@ -58,7 +54,7 @@
 
     nav a:hover {
         padding-left: var(--space);
-        background: transparent;
+        background: #0000;
     }
 
     main {
@@ -155,7 +151,7 @@
 }
 
 /* ========================================
-   ACCESSIBILITY & PRINT
+   ACCESSIBILITY
    ======================================== */
 @media (prefers-reduced-motion: reduce) {
 
@@ -167,12 +163,15 @@
     }
 }
 
+/* ========================================
+   PRINT
+   ======================================== */
 @media print {
 
     header,
     .view-controls,
     footer {
-        display: none;
+        display: #0000;
     }
 
     .member-card {
