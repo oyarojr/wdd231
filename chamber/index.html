@@ -6,26 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>Member Directory - Nairobi Chamber of Commerce</title>
+    <title>Home - Nairobi Chamber of Commerce | Connecting Business, Driving Growth</title>
     <meta name="description"
-        content="Browse our directory of member businesses. Connecting businesses, driving growth, and shaping Nairobi's commercial future.">
+        content="Welcome to Nairobi Chamber of Commerce. Empowering businesses, fostering innovation, and driving economic growth in Kenya's capital. Join us today.">
     <meta name="author" content="Daniel Oyaro">
-    <meta name="keywords" content="Nairobi, Chamber of Commerce, Business Directory, Kenya Business, Member Directory">
+    <meta name="keywords" content="Nairobi, Chamber of Commerce, Business, Kenya, Economic Growth, Networking, Business Development">
 
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Member Directory - Nairobi Chamber of Commerce">
+    <meta property="og:title" content="Nairobi Chamber of Commerce - Connecting Business, Driving Growth">
     <meta property="og:description"
-        content="Connecting businesses, driving growth, and shaping Nairobi's commercial future. Browse our member directory.">
+        content="Empowering businesses, fostering innovation, and driving economic growth in Kenya's capital.">
     <meta property="og:image" content="https://oyarojr.github.io/chamber/images/nairobi-choc-og.png">
-    <meta property="og:url" content="https://oyarojr.github.io/chamber/directory.html">
+    <meta property="og:url" content="https://oyarojr.github.io/chamber/">
     <meta property="og:site_name" content="Nairobi Chamber of Commerce">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Member Directory - Nairobi Chamber of Commerce">
+    <meta name="twitter:title" content="Nairobi Chamber of Commerce - Connecting Business, Driving Growth">
     <meta name="twitter:description"
-        content="Connecting businesses, driving growth, and shaping Nairobi's commercial future.">
+        content="Empowering businesses, fostering innovation, and driving economic growth in Kenya's capital.">
     <meta name="twitter:image" content="https://oyarojr.github.io/chamber/images/nairobi-choc-og.png">
 
     <!-- Critical CSS Inlined for LCP -->
@@ -114,6 +114,7 @@
             background: #ffffff1a;
             border: 2px solid #ffffff66;
             padding: 10px;
+            cursor: pointer;
             border-radius: 6px;
             margin-left: auto
         }
@@ -138,7 +139,7 @@
         }
 
         nav ul {
-            list-style: #0000;
+            list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
@@ -154,7 +155,7 @@
         nav a {
             display: block;
             color: var(--surface);
-            text-decoration: #0000;
+            text-decoration: none;
             padding: var(--space);
             font-weight: 500;
             position: relative
@@ -163,21 +164,7 @@
         main {
             max-width: 1400px;
             margin: 0 auto;
-            padding: var(--space-xl) var(--space);
             min-height: 60vh
-        }
-
-        .page-header {
-            text-align: center;
-            margin-bottom: var(--space-xl)
-        }
-
-        .page-header h2 {
-            font-family: var(--font-display);
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary-dark);
-            margin: 0 0 var(--space-sm) 0
         }
 
         .loading {
@@ -186,38 +173,25 @@
             color: var(--text-light)
         }
 
-        @media (min-width:768px) {
+        @media (min-width: 768px) {
             .header-container {
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center
             }
 
-            .site-title {
-                font-size: 1.5rem
-            }
-
-            .logo {
-                width: 60px;
-                height: 60px
-            }
-
             .hamburger {
-                display: #0000
+                display: none
             }
 
             .navigation {
                 display: block !important;
-                max-height: #0000
+                max-height: none
             }
 
             nav ul {
                 flex-direction: row;
-                background: #0000
-            }
-
-            .page-header h2 {
-                font-size: 3.5rem
+                background: transparent
             }
         }
     </style>
@@ -246,6 +220,11 @@
         <link rel="stylesheet" href="styles/larger.css">
     </noscript>
 
+    <link rel="preload" href="styles/home.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="styles/home.css">
+    </noscript>
+
     <!-- Deferred Google Fonts -->
     <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
@@ -257,7 +236,7 @@
     </noscript>
 
     <!-- JavaScript -->
-    <script defer src="scripts/directory.js"></script>
+    <script defer src="scripts/home.js"></script>
 
     <!-- Polyfill for older browsers -->
     <script>
@@ -288,7 +267,7 @@
             <div class="navigation">
                 <nav aria-label="Main navigation">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html" class="active">Home</a></li>
                         <li><a href="directory.html">Directory</a></li>
                         <li><a href="join.html">Join</a></li>
                         <li><a href="discover.html">Discover</a></li>
@@ -302,40 +281,95 @@
          MAIN CONTENT
          ================================ -->
     <main>
-        <!-- Page Header -->
-        <section class="page-header">
-            <h2>Member Directory</h2>
-            <p>Discover the businesses and organizations that make up our vibrant community</p>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2 class="hero-title">Connecting Business, Driving Growth</h2>
+                <p class="hero-description">Join Nairobi's premier business community and unlock opportunities for growth, networking, and success</p>
+                <a href="join.html" class="hero-cta">Join the Chamber →</a>
+            </div>
+            <div class="hero-image-overlay"></div>
         </section>
 
-        <!-- View Controls -->
-        <div class="view-controls">
-            <button id="gridView" class="view-btn active" aria-label="Switch to grid view">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
-                    <rect x="3" y="3" width="7" height="7"></rect>
-                    <rect x="14" y="3" width="7" height="7"></rect>
-                    <rect x="14" y="14" width="7" height="7"></rect>
-                    <rect x="3" y="14" width="7" height="7"></rect>
-                </svg>
-                Grid
-            </button>
-            <button id="listView" class="view-btn" aria-label="Switch to list view">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
-                    <line x1="8" y1="6" x2="21" y2="6"></line>
-                    <line x1="8" y1="12" x2="21" y2="12"></line>
-                    <line x1="8" y1="18" x2="21" y2="18"></line>
-                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
-                </svg>
-                List
-            </button>
+        <!-- Main Content Grid -->
+        <div class="content-grid">
+            <!-- Events Section -->
+            <section class="events-section card">
+                <h3 class="section-title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    Upcoming Events
+                </h3>
+                <div class="events-list">
+                    <article class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">15</span>
+                            <span class="event-month">FEB</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Annual Business Awards Gala</h4>
+                            <p>Celebrate excellence in business at our premier awards ceremony</p>
+                            <span class="event-time">🕒 6:00 PM - 10:00 PM</span>
+                        </div>
+                    </article>
+                    <article class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">22</span>
+                            <span class="event-month">FEB</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Digital Transformation Workshop</h4>
+                            <p>Learn how to leverage technology for business growth</p>
+                            <span class="event-time">🕒 2:00 PM - 5:00 PM</span>
+                        </div>
+                    </article>
+                    <article class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">05</span>
+                            <span class="event-month">MAR</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Networking Breakfast</h4>
+                            <p>Connect with fellow business leaders over breakfast</p>
+                            <span class="event-time">🕒 8:00 AM - 10:00 AM</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Weather Section -->
+            <section class="weather-section card">
+                <h3 class="section-title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    Nairobi Weather
+                </h3>
+                <div id="weatherContainer" class="weather-container">
+                    <div class="loading">Loading weather...</div>
+                </div>
+            </section>
         </div>
 
-        <!-- Member Directory Container -->
-        <section id="memberDirectory" class="member-directory" aria-label="Member directory listing">
-            <!-- Member cards will be dynamically inserted here by JavaScript -->
-            <div class="loading">Loading members...</div>
+        <!-- Member Spotlights Section -->
+        <section class="spotlights-section">
+            <h3 class="section-title-large">Featured Members</h3>
+            <p class="section-subtitle">Discover our distinguished Gold and Silver members driving business excellence in Nairobi</p>
+            <div id="spotlightsContainer" class="spotlights-grid">
+                <div class="loading">Loading featured members...</div>
+            </div>
         </section>
     </main>
 
@@ -395,10 +429,10 @@
         <!-- Footer Bottom -->
         <div class="footer-bottom">
             <p>&copy; <span id="copyrightYear">2026</span> Nairobi Chamber of Commerce. All rights reserved.</p>
-            <p>WDD 231 - Daniel Oyaro</p>
             <p>Last Modified: <span id="lastModified"></span></p>
         </div>
     </footer>
+
 </body>
 
 </html>
