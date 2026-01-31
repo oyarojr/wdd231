@@ -29,174 +29,6 @@
         content="Empowering businesses, fostering innovation, and driving economic growth in Kenya's capital.">
     <meta name="twitter:image" content="https://oyarojr.github.io/chamber/images/nairobi-choc-og.png">
 
-    <!-- Critical CSS Inlined for LCP -->
-    <style>
-        :root {
-            --primary: #1a4d2e;
-            --primary-dark: #0f2e1c;
-            --primary-light: #2d7a4a;
-            --secondary: #c8a561;
-            --bg: #fafaf8;
-            --surface: #fff;
-            --text: #1a1a1a;
-            --text-light: #5a5a5a;
-            --border: #e0dfd8;
-            --shadow: 0 2px 12px #1a4d2e14;
-            --shadow-hover: 0 8px 24px #1a4d2e26;
-            --font-display: 'Playfair Display', serif;
-            --font-body: 'Inter', -apple-system, sans-serif;
-            --space: 1.25rem;
-            --space-sm: .875rem;
-            --space-lg: 2rem;
-            --space-xl: 3rem
-        }
-
-        * {
-            box-sizing: border-box
-        }
-
-        body {
-            font-family: var(--font-body);
-            line-height: 1.6;
-            color: var(--text);
-            background: var(--bg);
-            margin: 0
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-            color: var(--surface);
-            padding: var(--space);
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 100
-        }
-
-        .header-container {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space);
-            max-width: 1400px;
-            margin: 0 auto
-        }
-
-        .header-top {
-            display: flex;
-            align-items: center;
-            gap: var(--space)
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm)
-        }
-
-        .logo {
-            width: 50px;
-            height: 50px;
-            border-radius: 8px;
-            background: var(--surface);
-            padding: 4px
-        }
-
-        .site-title {
-            font-family: var(--font-display);
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin: 0
-        }
-
-        .hamburger {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            background: #ffffff1a;
-            border: 2px solid #ffffff66;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 6px;
-            margin-left: auto
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background: var(--surface);
-            border-radius: 2px;
-            transition: transform 250ms
-        }
-
-        .navigation {
-            display: none;
-            max-height: 0;
-            overflow: hidden
-        }
-
-        .navigation.active {
-            display: block;
-            max-height: 400px
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            background: #ffffff1a;
-            border-radius: 8px
-        }
-
-        nav li {
-            border-bottom: 1px solid #ffffff1a
-        }
-
-        nav a {
-            display: block;
-            color: var(--surface);
-            text-decoration: none;
-            padding: var(--space);
-            font-weight: 500;
-            position: relative
-        }
-
-        main {
-            max-width: 1400px;
-            margin: 0 auto;
-            min-height: 60vh
-        }
-
-        .loading {
-            text-align: center;
-            padding: 4.5rem 0;
-            color: var(--text-light)
-        }
-
-        @media (min-width: 768px) {
-            .header-container {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center
-            }
-
-            .hamburger {
-                display: none
-            }
-
-            .navigation {
-                display: block !important;
-                max-height: none
-            }
-
-            nav ul {
-                flex-direction: row;
-                background: transparent
-            }
-        }
-    </style>
-
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -205,17 +37,11 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 
+    <!-- Stylesheets (normalize.css first, then small.css for base styles) -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+
     <!-- Deferred Non-Critical CSS -->
-    <link rel="preload" href="styles/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="styles/normalize.css">
-    </noscript>
-
-    <link rel="preload" href="styles/small.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="styles/small.css">
-    </noscript>
-
     <link rel="preload" href="styles/larger.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="styles/larger.css">
@@ -387,7 +213,10 @@
                 Uhuru Highway<br>
                 Nairobi, Kenya</p>
             <p>P.O. Box 47024-00100</p>
-            <p><a href="mailto:info@nairobichamber.or.ke">info@nairobichamber.or.ke</a></p>
+            <p><a href="/cdn-cgi/l/email-protection#80e9eee6efc0eee1e9f2efe2e9e3e8e1ede2e5f2aeeff2aeebe5"><span
+                        class="__cf_email__"
+                        data-cfemail="3a53545c557a545b534855585359525b57585f4814554814515f">[email&#160;protected]</span></a>
+            </p>
             <p><a href="tel:+254202219458">+254 20 221 9458</a></p>
         </div>
 
@@ -431,11 +260,5 @@
 
         <!-- Footer Bottom -->
         <div class="footer-bottom">
-            <p>&copy; <span id="copyrightYear">2026</span> Nairobi Chamber of Commerce. All rights reserved.</p>
-            <p>Last Modified: <span id="lastModified"></span></p>
+            <p>&copy; 2024 Nairobi Chamber of Commerce. All rights reserved.</p>
         </div>
-    </footer>
-
-</body>
-
-</html>
