@@ -55,12 +55,6 @@
 
     <!-- JavaScript -->
     <script defer src="scripts/home.js"></script>
-
-    <!-- Polyfill for older browsers -->
-    <script>
-        /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
-        !function (e) { "use strict"; var t = function (t, n, r, o) { var i, d = e.document, a = d.createElement("link"); if (n) i = n; else { var l = (d.body || d.getElementsByTagName("head")[0]).childNodes; i = l[l.length - 1] } var s = d.styleSheets; if (o) for (var f in o) o.hasOwnProperty(f) && a.setAttribute(f, o[f]); a.rel = "stylesheet", a.href = t, a.media = "only x", function e(t) { if (d.body) return t(); setTimeout(function () { e(t) }) }(function () { i.parentNode.insertBefore(a, n ? i : i.nextSibling) }); var u = function (e) { for (var t = a.href, n = s.length; n--;)if (s[n].href === t) return e(); setTimeout(function () { u(e) }) }; return a.addEventListener && a.addEventListener("load", function () { this.media = r || "all" }), a.onloadcssdefined = u, u(function () { a.media !== r && (a.media = r) }), a }; "undefined" != typeof exports ? exports.loadCSS = t : e.loadCSS = t }("undefined" != typeof global ? global : this);
-    </script>
 </head>
 
 <body>
