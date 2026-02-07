@@ -1,0 +1,274 @@
+/* ========================================
+   THANK YOU PAGE STYLES
+   ======================================== */
+
+/* ========================================
+   SUCCESS CONTAINER
+   ======================================== */
+.success-container {
+    text-align: center;
+    padding: var(--space-xl) 0;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.success-icon {
+    display: inline-block;
+    margin-bottom: var(--space);
+    color: #2d7a4a;
+    animation: scaleIn 0.5s ease-out;
+}
+
+.success-icon svg {
+    filter: drop-shadow(0 4px 12px rgba(45, 122, 74, 0.2));
+}
+
+.success-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin: 0 0 var(--space) 0;
+}
+
+.success-message {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ========================================
+   APPLICATION SUMMARY SECTION
+   ======================================== */
+.application-summary {
+    background: var(--surface);
+    padding: var(--space-xl);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    margin: var(--space-xl) 0;
+}
+
+.application-summary h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin: 0 0 var(--space-sm) 0;
+}
+
+.summary-intro {
+    color: var(--text-light);
+    margin: 0 0 var(--space-lg) 0;
+}
+
+.summary-grid {
+    display: grid;
+    gap: var(--space);
+}
+
+.summary-item {
+    padding: var(--space);
+    background: var(--bg);
+    border-left: 4px solid var(--primary);
+    border-radius: 4px;
+}
+
+.summary-label {
+    font-weight: 600;
+    color: var(--text-light);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+}
+
+.summary-value {
+    color: var(--text);
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+/* ========================================
+   NEXT STEPS SECTION
+   ======================================== */
+.next-steps {
+    margin: var(--space-xl) 0;
+}
+
+.next-steps h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin: 0 0 var(--space-lg) 0;
+    text-align: center;
+}
+
+.steps-grid {
+    display: grid;
+    gap: var(--space-lg);
+}
+
+.step-card {
+    background: var(--surface);
+    padding: var(--space-lg);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: transform 250ms, box-shadow 250ms;
+}
+
+.step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: var(--surface);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 auto var(--space);
+}
+
+.step-card h4 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin: 0 0 var(--space-sm) 0;
+}
+
+.step-card p {
+    color: var(--text-light);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ========================================
+   CTA CONTAINER
+   ======================================== */
+.cta-container {
+    text-align: center;
+    padding: var(--space-xl) 0;
+}
+
+.cta-container p {
+    font-size: 1.25rem;
+    color: var(--text);
+    margin: 0 0 var(--space-lg) 0;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.cta-btn {
+    padding: var(--space) var(--space-lg);
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 250ms, box-shadow 250ms;
+    display: inline-block;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.cta-btn.primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: var(--surface);
+}
+
+.cta-btn.secondary {
+    background: var(--surface);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.cta-btn.secondary:hover {
+    background: var(--primary);
+    color: var(--surface);
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* ========================================
+   TABLET & UP (768px+)
+   ======================================== */
+@media (min-width: 768px) {
+    .success-title {
+        font-size: 3rem;
+    }
+
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+        max-width: none;
+    }
+
+    .cta-btn {
+        min-width: 200px;
+    }
+}
+
+/* ========================================
+   DESKTOP (1024px+)
+   ======================================== */
+@media (min-width: 1024px) {
+    .success-title {
+        font-size: 3.5rem;
+    }
+
+    .success-message {
+        font-size: 1.25rem;
+    }
+
+    .summary-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
