@@ -1,0 +1,437 @@
+/* ========================================
+   JOIN PAGE STYLES
+   Max 220 CSS Declarations
+   ======================================== */
+
+/* ========================================
+   JOIN CONTAINER LAYOUT
+   ======================================== */
+.join-container {
+    display: grid;
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+}
+
+/* ========================================
+   APPLICATION FORM SECTION
+   ======================================== */
+.application-form {
+    background: var(--surface);
+    padding: var(--space-xl);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.application-form h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin: 0 0 var(--space-sm) 0;
+}
+
+.form-intro {
+    color: var(--text-light);
+    margin: 0 0 var(--space-lg) 0;
+}
+
+/* ========================================
+   FORM ELEMENTS
+   ======================================== */
+fieldset {
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+legend {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+    padding: 0 var(--space-sm);
+}
+
+label {
+    display: block;
+    margin-bottom: var(--space);
+    font-weight: 500;
+    color: var(--text);
+}
+
+.required {
+    color: #d32f2f;
+    font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: var(--space-sm) var(--space);
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    transition: border-color 250ms, box-shadow 250ms;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(26, 77, 46, 0.1);
+}
+
+input:invalid:not(:placeholder-shown),
+select:invalid:not(:placeholder-shown) {
+    border-color: #d32f2f;
+}
+
+input:valid:not(:placeholder-shown) {
+    border-color: #2d7a4a;
+}
+
+small {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+select {
+    background: var(--surface);
+    cursor: pointer;
+}
+
+/* ========================================
+   SUBMIT BUTTON
+   ======================================== */
+.submit-btn {
+    width: 100%;
+    padding: var(--space) var(--space-lg);
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: var(--surface);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 250ms, box-shadow 250ms;
+    margin-top: var(--space);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* ========================================
+   MEMBERSHIP CARDS ASIDE
+   ======================================== */
+.membership-cards {
+    display: grid;
+    gap: var(--space);
+}
+
+.membership-cards h3 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin: 0 0 var(--space-sm) 0;
+}
+
+.cards-intro {
+    color: var(--text-light);
+    margin: 0 0 var(--space-lg) 0;
+}
+
+/* ========================================
+   MEMBERSHIP CARD STYLES
+   ======================================== */
+.membership-card {
+    background: var(--surface);
+    padding: var(--space-lg);
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: transform 250ms, box-shadow 250ms;
+    opacity: 0;
+    animation: slideInRight 0.6s ease-out forwards;
+}
+
+.membership-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.membership-card:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.membership-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-sm);
+}
+
+.membership-card h4 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.card-price {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--primary);
+    margin: 0;
+}
+
+.card-desc {
+    color: var(--text-light);
+    margin: 0 0 var(--space) 0;
+}
+
+/* Card Color Accents */
+.np-card {
+    border-left: 4px solid #4a90e2;
+}
+
+.np-card h4 {
+    color: #4a90e2;
+}
+
+.bronze-card {
+    border-left: 4px solid #cd7f32;
+}
+
+.bronze-card h4 {
+    color: #cd7f32;
+}
+
+.silver-card {
+    border-left: 4px solid #c0c0c0;
+}
+
+.silver-card h4 {
+    color: #707070;
+}
+
+.gold-card {
+    border-left: 4px solid #ffd700;
+}
+
+.gold-card h4 {
+    color: #b8860b;
+}
+
+/* ========================================
+   LEARN MORE BUTTON
+   ======================================== */
+.learn-more-btn {
+    background: var(--primary);
+    color: var(--surface);
+    border: none;
+    padding: var(--space-sm) var(--space);
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background 250ms;
+}
+
+.learn-more-btn:hover {
+    background: var(--primary-dark);
+}
+
+/* ========================================
+   MODAL STYLES
+   ======================================== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: var(--space);
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--surface);
+    padding: var(--space-xl);
+    border-radius: 12px;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+.modal-close {
+    position: absolute;
+    top: var(--space);
+    right: var(--space);
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: var(--text-light);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 250ms;
+}
+
+.modal-close:hover {
+    background: var(--border);
+    color: var(--text);
+}
+
+.modal-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin: 0 0 var(--space) 0;
+}
+
+.modal-content ul {
+    padding-left: var(--space-lg);
+    margin: var(--space) 0;
+}
+
+.modal-content li {
+    margin-bottom: var(--space-sm);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.modal-note {
+    background: #f0f7f4;
+    padding: var(--space);
+    border-left: 4px solid var(--primary);
+    border-radius: 4px;
+    margin-top: var(--space);
+    font-style: italic;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ========================================
+   TABLET & UP (768px+)
+   ======================================== */
+@media (min-width: 768px) {
+    .join-container {
+        grid-template-columns: 1fr;
+    }
+
+    .membership-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .membership-cards h3,
+    .cards-intro {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ========================================
+   DESKTOP (1024px+)
+   ======================================== */
+@media (min-width: 1024px) {
+    .join-container {
+        grid-template-columns: 1.5fr 1fr;
+        gap: var(--space-xl);
+    }
+
+    .membership-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .membership-cards h3,
+    .cards-intro {
+        grid-column: auto;
+    }
+
+    fieldset {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space);
+    }
+
+    legend {
+        grid-column: 1 / -1;
+    }
+
+    label[for="businessDesc"] {
+        grid-column: 1 / -1;
+    }
+}

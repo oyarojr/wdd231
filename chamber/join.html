@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Join Us - Nairobi Chamber of Commerce | Membership Application</title>
+    <meta name="description"
+        content="Join the Nairobi Chamber of Commerce and connect with Kenya's leading business community. Choose from our membership levels to unlock growth opportunities.">
+    <meta name="author" content="Daniel Oyaro">
+    <meta name="keywords"
+        content="Nairobi, Chamber of Commerce, Membership, Business, Kenya, Join, Application, Networking">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Join Us - Nairobi Chamber of Commerce">
+    <meta property="og:description"
+        content="Join the Nairobi Chamber of Commerce and connect with Kenya's leading business community.">
+    <meta property="og:image" content="https://oyarojr.github.io/chamber/images/nairobi-choc-og.png">
+    <meta property="og:url" content="https://oyarojr.github.io/chamber/join.html">
+    <meta property="og:site_name" content="Nairobi Chamber of Commerce">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Join Us - Nairobi Chamber of Commerce">
+    <meta name="twitter:description"
+        content="Join the Nairobi Chamber of Commerce and connect with Kenya's leading business community.">
+    <meta name="twitter:image" content="https://oyarojr.github.io/chamber/images/nairobi-choc-og.png">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+
+    <!-- Deferred Google Fonts -->
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <!-- JavaScript -->
+    <script defer src="scripts/join.js"></script>
+</head>
+
+<body>
+    <!-- ================================
+         HEADER SECTION
+         ================================ -->
+    <header>
+        <div class="header-container">
+            <div class="header-top">
+                <div class="logo-container">
+                    <img src="images/nairobi-choc.webp" alt="Nairobi Chamber of Commerce Logo" class="logo" width="50"
+                        height="50">
+                    <h1 class="site-title">Nairobi Chamber of Commerce</h1>
+                </div>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="navigation">
+                <nav aria-label="Main navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li><a href="join.html" class="active">Join</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================================
+         MAIN CONTENT
+         ================================ -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <h2>Join Our Community</h2>
+            <p>Become a member and connect with Nairobi's leading businesses</p>
+        </section>
+
+        <!-- Form and Membership Cards Container -->
+        <div class="join-container">
+            <!-- Application Form -->
+            <section class="application-form">
+                <h3>Membership Application</h3>
+                <p class="form-intro">Fill out the form below to start your membership journey</p>
+
+                <form method="get" action="thankyou.html" id="membershipForm">
+                    <!-- Personal Information -->
+                    <fieldset>
+                        <legend>Personal Information</legend>
+
+                        <label for="firstName">
+                            First Name <span class="required">*</span>
+                            <input type="text" id="firstName" name="firstName" title="Enter your first name" required
+                                autocomplete="given-name">
+                        </label>
+
+                        <label for="lastName">
+                            Last Name <span class="required">*</span>
+                            <input type="text" id="lastName" name="lastName" title="Enter your last name" required
+                                autocomplete="family-name">
+                        </label>
+
+                        <label for="orgTitle">
+                            Organizational Title
+                            <input type="text" id="orgTitle" name="orgTitle" title="Your title within the organization"
+                                autocomplete="organization-title"
+                                pattern="[A-Za-z\s\-]{7,}"
+                                placeholder="e.g., Chief Executive Officer">
+                            <small>Minimum 7 characters (letters, spaces, and hyphens only)</small>
+                        </label>
+                    </fieldset>
+
+                    <!-- Contact Information -->
+                    <fieldset>
+                        <legend>Contact Information</legend>
+
+                        <label for="email">
+                            Email Address <span class="required">*</span>
+                            <input type="email" id="email" name="email" title="Enter your email address" required
+                                autocomplete="email" placeholder="example@company.com">
+                        </label>
+
+                        <label for="mobile">
+                            Mobile Phone <span class="required">*</span>
+                            <input type="tel" id="mobile" name="mobile" title="Enter your mobile phone number" required
+                                autocomplete="tel" placeholder="+254 712 345 678">
+                        </label>
+                    </fieldset>
+
+                    <!-- Organization Information -->
+                    <fieldset>
+                        <legend>Organization Information</legend>
+
+                        <label for="businessName">
+                            Business/Organization Name <span class="required">*</span>
+                            <input type="text" id="businessName" name="businessName"
+                                title="Enter your business or organization name" required autocomplete="organization">
+                        </label>
+
+                        <label for="membershipLevel">
+                            Membership Level <span class="required">*</span>
+                            <select id="membershipLevel" name="membershipLevel" title="Select your membership level"
+                                required>
+                                <option value="">-- Select a Membership Level --</option>
+                                <option value="np">NP Membership (Non-Profit - No Fee)</option>
+                                <option value="bronze">Bronze Membership</option>
+                                <option value="silver">Silver Membership</option>
+                                <option value="gold">Gold Membership</option>
+                            </select>
+                        </label>
+
+                        <label for="businessDesc">
+                            Business/Organization Description
+                            <textarea id="businessDesc" name="businessDesc"
+                                title="Describe your business or organization" rows="4"
+                                placeholder="Tell us about your organization, its mission, and what you do..."></textarea>
+                        </label>
+                    </fieldset>
+
+                    <!-- Hidden Timestamp -->
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                </form>
+            </section>
+
+            <!-- Membership Level Cards -->
+            <aside class="membership-cards">
+                <h3>Membership Levels</h3>
+                <p class="cards-intro">Choose the level that's right for your organization</p>
+
+                <article class="membership-card np-card">
+                    <div class="card-header">
+                        <h4>NP Membership</h4>
+                        <p class="card-price">Free</p>
+                    </div>
+                    <p class="card-desc">For non-profit organizations</p>
+                    <button class="learn-more-btn" data-modal="npModal" aria-label="Learn more about NP Membership">
+                        Learn More →
+                    </button>
+                </article>
+
+                <article class="membership-card bronze-card">
+                    <div class="card-header">
+                        <h4>Bronze</h4>
+                        <p class="card-price">KES 25,000/year</p>
+                    </div>
+                    <p class="card-desc">Essential benefits for growing businesses</p>
+                    <button class="learn-more-btn" data-modal="bronzeModal" aria-label="Learn more about Bronze Membership">
+                        Learn More →
+                    </button>
+                </article>
+
+                <article class="membership-card silver-card">
+                    <div class="card-header">
+                        <h4>Silver</h4>
+                        <p class="card-price">KES 50,000/year</p>
+                    </div>
+                    <p class="card-desc">Enhanced networking and visibility</p>
+                    <button class="learn-more-btn" data-modal="silverModal" aria-label="Learn more about Silver Membership">
+                        Learn More →
+                    </button>
+                </article>
+
+                <article class="membership-card gold-card">
+                    <div class="card-header">
+                        <h4>Gold</h4>
+                        <p class="card-price">KES 100,000/year</p>
+                    </div>
+                    <p class="card-desc">Premium benefits and spotlight features</p>
+                    <button class="learn-more-btn" data-modal="goldModal" aria-label="Learn more about Gold Membership">
+                        Learn More →
+                    </button>
+                </article>
+            </aside>
+        </div>
+    </main>
+
+    <!-- ================================
+         MODALS FOR MEMBERSHIP DETAILS
+         ================================ -->
+    <!-- NP Membership Modal -->
+    <div id="npModal" class="modal" role="dialog" aria-labelledby="npModalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h3 id="npModalTitle">NP Membership Benefits</h3>
+            <ul>
+                <li>Access to chamber networking events</li>
+                <li>Monthly newsletter with business insights</li>
+                <li>Basic business directory listing</li>
+                <li>Access to member resources and guides</li>
+                <li>Community forums and discussion groups</li>
+            </ul>
+            <p class="modal-note"><strong>Perfect for:</strong> Non-profit organizations looking to connect with the
+                business community</p>
+        </div>
+    </div>
+
+    <!-- Bronze Membership Modal -->
+    <div id="bronzeModal" class="modal" role="dialog" aria-labelledby="bronzeModalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h3 id="bronzeModalTitle">Bronze Membership Benefits</h3>
+            <ul>
+                <li>All NP Membership benefits</li>
+                <li>Enhanced directory listing with logo</li>
+                <li>10% discount on all chamber events</li>
+                <li>Access to exclusive workshops and seminars</li>
+                <li>Quarterly business development sessions</li>
+                <li>Networking breakfast invitations (4 per year)</li>
+                <li>Certificate of membership</li>
+            </ul>
+            <p class="modal-note"><strong>Perfect for:</strong> Small to medium enterprises seeking growth
+                opportunities</p>
+        </div>
+    </div>
+
+    <!-- Silver Membership Modal -->
+    <div id="silverModal" class="modal" role="dialog" aria-labelledby="silverModalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h3 id="silverModalTitle">Silver Membership Benefits</h3>
+            <ul>
+                <li>All Bronze Membership benefits</li>
+                <li>Featured listing in member directory</li>
+                <li>20% discount on all chamber events</li>
+                <li>2 spotlight features on homepage per year</li>
+                <li>Priority access to business matchmaking</li>
+                <li>Monthly networking breakfast invitations</li>
+                <li>Business mentorship program access</li>
+                <li>Social media promotion (quarterly)</li>
+                <li>Free attendance to annual business summit</li>
+            </ul>
+            <p class="modal-note"><strong>Perfect for:</strong> Established businesses wanting enhanced visibility</p>
+        </div>
+    </div>
+
+    <!-- Gold Membership Modal -->
+    <div id="goldModal" class="modal" role="dialog" aria-labelledby="goldModalTitle" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h3 id="goldModalTitle">Gold Membership Benefits</h3>
+            <ul>
+                <li>All Silver Membership benefits</li>
+                <li>Premium directory listing with full profile</li>
+                <li>30% discount on all chamber events</li>
+                <li>4 spotlight features on homepage per year</li>
+                <li>Exclusive gold member networking events</li>
+                <li>Speaking opportunities at chamber events</li>
+                <li>Dedicated account manager</li>
+                <li>Priority booth placement at trade shows</li>
+                <li>Monthly social media promotion</li>
+                <li>VIP seating at annual gala and awards</li>
+                <li>Business consultation services (quarterly)</li>
+                <li>Logo featured on chamber website and materials</li>
+            </ul>
+            <p class="modal-note"><strong>Perfect for:</strong> Leading enterprises seeking maximum exposure and
+                influence</p>
+        </div>
+    </div>
+
+    <!-- ================================
+         FOOTER SECTION
+         ================================ -->
+    <footer>
+        <!-- Contact Information -->
+        <div class="footer-section">
+            <h3>Nairobi Chamber of Commerce</h3>
+            <p>Utalii House, 10th Floor<br>
+                Uhuru Highway<br>
+                Nairobi, Kenya</p>
+            <p>P.O. Box 47024-00100</p>
+            <p><a href="mailto:info@nairobichamber.or.ke">info@nairobichamber.or.ke</a></p>
+            <p><a href="tel:+254202219458">+254 20 221 9458</a></p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <p><a href="index.html">Home</a></p>
+            <p><a href="directory.html">Member Directory</a></p>
+            <p><a href="join.html">Join Us</a></p>
+            <p><a href="discover.html">Discover Nairobi</a></p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section">
+            <h3>Connect With Us</h3>
+            <p>Follow us on social media to stay updated with the latest news and events.</p>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@nairobichamber" target="_blank" rel="noopener noreferrer"
+                    class="social-link" aria-label="Visit our YouTube channel">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                        <path
+                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                </a>
+                <a href="https://twitter.com/nairobichamber" target="_blank" rel="noopener noreferrer"
+                    class="social-link" aria-label="Visit our Twitter page">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                        <path
+                            d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/nairobi-chamber" target="_blank" rel="noopener noreferrer"
+                    class="social-link" aria-label="Visit our LinkedIn page">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nairobi Chamber of Commerce. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
