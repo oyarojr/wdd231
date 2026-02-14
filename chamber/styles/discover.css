@@ -128,22 +128,9 @@
     }
     .card-figure:hover .card-image { transform: scale(1.1); filter: brightness(1.15) saturate(1.1); }
     .card-figure::after { background: linear-gradient(135deg, rgba(26, 77, 46, 0.3), rgba(200, 165, 97, 0.3)); }
-    .attraction-card { position: relative; }
-    .attraction-card::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        border-radius: 12px;
-        padding: 2px;
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-        opacity: 0;
-        transition: opacity 400ms ease;
-        pointer-events: none;
+    .attraction-card:hover {
+        box-shadow: 0 8px 32px rgba(26, 77, 46, 0.2), 0 0 0 2px var(--primary);
     }
-    .attraction-card:hover::before { opacity: 1; }
     .page-header h2 { font-size: 3.5rem; }
     .page-header p { font-size: 1.25rem; }
 }
