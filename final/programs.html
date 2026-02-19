@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Programs – Damimah Junior School</title>
+    <meta name="description"
+        content="Explore the full range of academic and enrichment programs at Damimah Junior School. Core subjects, arts, sports, technology, and extracurricular activities for Grades 1–3.">
+    <meta name="author" content="Damimah Junior School">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Academic Programs – Damimah Junior School">
+    <meta property="og:description"
+        content="Browse 16+ programs spanning core academics, enrichment, sports, and technology designed for young learners in Grades 1–3.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://damimahjs.org/programs.html">
+    <meta property="og:image" content="https://damimahjs.org/images/og-programs.jpg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo" aria-label="Damimah Junior School Home">
+                <div class="logo-icon" aria-hidden="true">D</div>
+                <div class="logo-text">
+                    <span class="logo-name">Damimah Junior School</span>
+                    <span class="logo-tagline">Nurturing Young Minds</span>
+                </div>
+            </a>
+            <button class="hamburger" aria-expanded="false" aria-controls="site-nav"
+                aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+                <ul role="list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programs.html" aria-current="page">Programs</a></li>
+                    <li><a href="contact.html">Admissions &amp; Contact</a></li>
+                </ul>
+            </nav>
+            <button class="dark-mode-toggle" aria-label="Toggle dark mode">🌙 Dark</button>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- PAGE HERO -->
+        <section class="page-hero" aria-labelledby="page-title">
+            <div class="container">
+                <h1 id="page-title">Academic Programs &amp; Enrichment</h1>
+                <p>From core literacy to creative arts, our programs are designed to inspire every learner. Click any
+                    program card to learn more.</p>
+            </div>
+        </section>
+
+        <!-- PROGRAMS SECTION -->
+        <section class="bg-light" aria-labelledby="programs-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="programs-heading">All Programs</h2>
+                    <p>Filter by category to find the right fit for your child. All programs run during the school term.
+                    </p>
+                    <div class="section-divider" aria-hidden="true"></div>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div id="filter-bar" class="filter-bar" role="group" aria-label="Filter programs by category">
+                    <!-- Populated by JS -->
+                </div>
+
+                <!-- Programs Grid -->
+                <div id="programs-grid" aria-live="polite" aria-label="Program listings">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- INFO STRIP -->
+        <section class="bg-white" aria-labelledby="info-heading">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="info-heading">Program Information</h2>
+                    <div class="section-divider" aria-hidden="true"></div>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">📅</div>
+                        <h3>Scheduling</h3>
+                        <p>Programs run throughout the school term. Extracurricular clubs operate after school hours
+                            from 3:30–4:30 PM.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">👩‍🏫</div>
+                        <h3>Qualified Teachers</h3>
+                        <p>All our teachers hold appropriate teaching qualifications and participate in regular
+                            professional development.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">📝</div>
+                        <h3>Enrollment</h3>
+                        <p>Club and extracurricular enrollment is done at the beginning of each term. Core programs are
+                            mandatory for enrolled students.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">📞</div>
+                        <h3>Questions?</h3>
+                        <p>Contact us on <strong>+254 700 123 456</strong> or visit the <a href="contact.html">contact
+                                page</a> for program inquiries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL DIALOG -->
+    <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+        aria-hidden="true">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modal-title">Program Details</h3>
+                <button id="modal-close" class="modal-close" aria-label="Close dialog">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-content">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
+                    <div class="logo-icon" aria-hidden="true" style="width:36px;height:36px;font-size:1.1rem;">D</div>
+                    <span style="font-family:'Poppins',sans-serif;font-weight:700;color:#fff;">Damimah Junior
+                        School</span>
+                </div>
+                <p>Providing quality, holistic education for children in Grades 1–3. Every learner matters at Damimah.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <nav class="footer-links" aria-label="Footer navigation">
+                    <a href="index.html">Home</a>
+                    <a href="programs.html">Academic Programs</a>
+                    <a href="contact.html">Admissions &amp; Contact</a>
+                    <a href="attributions.html">Attributions</a>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>📍 123 School Lane, Nairobi, Kenya</p>
+                <p>📞 +254 700 123 456</p>
+                <p>✉️ info@damimahjs.org</p>
+                <p>🕐 Mon–Fri: 7:00 AM – 5:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="footer-year">2026</span> Damimah Junior School. All rights reserved.</p>
+            <p>Created for Educational Purposes</p>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts/programs.js"></script>
+</body>
+
+</html>

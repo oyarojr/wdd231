@@ -1,0 +1,260 @@
+{
+    "programs": [
+        {
+            "id": 1,
+            "name": "Early Literacy",
+            "grade": "Grade 1",
+            "category": "Core Academic",
+            "teacher": "Mrs. Aisha Kamau",
+            "schedule": "Mon–Fri, 8:00–9:30 AM",
+            "capacity": 25,
+            "description": "Foundational reading and writing skills through phonics, storytelling, and creative expression.",
+            "skills": [
+                "Reading",
+                "Writing",
+                "Phonics",
+                "Vocabulary"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Mathematics Foundations",
+            "grade": "Grade 1",
+            "category": "Core Academic",
+            "teacher": "Mr. David Osei",
+            "schedule": "Mon–Fri, 9:30–11:00 AM",
+            "capacity": 25,
+            "description": "Number sense, basic operations, patterns, and shapes through hands-on manipulatives.",
+            "skills": [
+                "Counting",
+                "Addition",
+                "Subtraction",
+                "Shapes"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Science Explorers",
+            "grade": "Grade 2",
+            "category": "Core Academic",
+            "teacher": "Ms. Fatima Njoroge",
+            "schedule": "Tue & Thu, 10:00–11:30 AM",
+            "capacity": 22,
+            "description": "Inquiry-based discovery of living things, weather, matter, and the environment.",
+            "skills": [
+                "Observation",
+                "Inquiry",
+                "Recording",
+                "Experiments"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Creative Arts",
+            "grade": "All Grades",
+            "category": "Enrichment",
+            "teacher": "Mrs. Grace Mensah",
+            "schedule": "Wed, 1:00–2:30 PM",
+            "capacity": 30,
+            "description": "Drawing, painting, sculpting, and crafts that develop fine motor skills and self-expression.",
+            "skills": [
+                "Drawing",
+                "Painting",
+                "Sculpting",
+                "Creativity"
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Music & Movement",
+            "grade": "All Grades",
+            "category": "Enrichment",
+            "teacher": "Mr. Samuel Addo",
+            "schedule": "Fri, 1:00–2:00 PM",
+            "capacity": 35,
+            "description": "Rhythm, melody, singing, and movement activities that integrate music into daily learning.",
+            "skills": [
+                "Rhythm",
+                "Singing",
+                "Coordination",
+                "Listening"
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Physical Education",
+            "grade": "All Grades",
+            "category": "Health & Wellness",
+            "teacher": "Mr. Kwame Boateng",
+            "schedule": "Mon, Wed & Fri, 2:30–3:30 PM",
+            "capacity": 40,
+            "description": "Team sports, motor skill development, and health education for active, healthy lifestyles.",
+            "skills": [
+                "Teamwork",
+                "Agility",
+                "Coordination",
+                "Sportsmanship"
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Reading Club",
+            "grade": "Grade 3",
+            "category": "Enrichment",
+            "teacher": "Mrs. Aisha Kamau",
+            "schedule": "Mon & Wed, 3:30–4:30 PM",
+            "capacity": 15,
+            "description": "Advanced reading group exploring chapter books, comprehension strategies, and discussions.",
+            "skills": [
+                "Comprehension",
+                "Critical Thinking",
+                "Discussion",
+                "Analysis"
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Environmental Studies",
+            "grade": "Grade 3",
+            "category": "Core Academic",
+            "teacher": "Ms. Fatima Njoroge",
+            "schedule": "Mon–Fri, 11:00 AM–12:00 PM",
+            "capacity": 24,
+            "description": "Local ecosystems, conservation, and sustainable practices through outdoor learning.",
+            "skills": [
+                "Conservation",
+                "Research",
+                "Field Study",
+                "Mapping"
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Digital Literacy",
+            "grade": "Grade 2–3",
+            "category": "Technology",
+            "teacher": "Mr. James Otieno",
+            "schedule": "Thu, 1:00–2:30 PM",
+            "capacity": 20,
+            "description": "Introduction to computers, internet safety, basic typing, and educational software.",
+            "skills": [
+                "Typing",
+                "Internet Safety",
+                "Software Use",
+                "Problem Solving"
+            ]
+        },
+        {
+            "id": 10,
+            "name": "Chess & Strategy",
+            "grade": "Grade 2–3",
+            "category": "Extracurricular",
+            "teacher": "Mr. David Osei",
+            "schedule": "Tue, 3:30–4:30 PM",
+            "capacity": 18,
+            "description": "Chess instruction that builds logical thinking, patience, and strategic planning skills.",
+            "skills": [
+                "Logic",
+                "Strategy",
+                "Patience",
+                "Planning"
+            ]
+        },
+        {
+            "id": 11,
+            "name": "Storytelling & Drama",
+            "grade": "All Grades",
+            "category": "Enrichment",
+            "teacher": "Mrs. Grace Mensah",
+            "schedule": "Tue, 1:00–2:30 PM",
+            "capacity": 28,
+            "description": "Oral storytelling, puppet theater, and short dramatic performances to build communication.",
+            "skills": [
+                "Public Speaking",
+                "Creativity",
+                "Memory",
+                "Confidence"
+            ]
+        },
+        {
+            "id": 12,
+            "name": "Social Studies",
+            "grade": "Grade 2",
+            "category": "Core Academic",
+            "teacher": "Mrs. Aisha Kamau",
+            "schedule": "Mon–Fri, 10:00–11:00 AM",
+            "capacity": 25,
+            "description": "Community, culture, history, and geography concepts for understanding our world.",
+            "skills": [
+                "Map Reading",
+                "Citizenship",
+                "Culture",
+                "History"
+            ]
+        },
+        {
+            "id": 13,
+            "name": "Math Olympiad Prep",
+            "grade": "Grade 3",
+            "category": "Extracurricular",
+            "teacher": "Mr. David Osei",
+            "schedule": "Wed, 3:30–4:30 PM",
+            "capacity": 15,
+            "description": "Advanced problem solving and competition mathematics for gifted young mathematicians.",
+            "skills": [
+                "Problem Solving",
+                "Logic",
+                "Speed",
+                "Accuracy"
+            ]
+        },
+        {
+            "id": 14,
+            "name": "Kiswahili Language",
+            "grade": "All Grades",
+            "category": "Core Academic",
+            "teacher": "Ms. Joyce Wanjiku",
+            "schedule": "Mon–Fri, 9:00–9:30 AM",
+            "capacity": 30,
+            "description": "Kiswahili reading, writing, and conversation to build local language proficiency.",
+            "skills": [
+                "Reading",
+                "Writing",
+                "Conversation",
+                "Pronunciation"
+            ]
+        },
+        {
+            "id": 15,
+            "name": "Garden & Nature Club",
+            "grade": "All Grades",
+            "category": "Health & Wellness",
+            "teacher": "Ms. Fatima Njoroge",
+            "schedule": "Fri, 3:30–4:30 PM",
+            "capacity": 20,
+            "description": "School gardening, composting, and nature observation to build environmental stewardship.",
+            "skills": [
+                "Planting",
+                "Composting",
+                "Observation",
+                "Responsibility"
+            ]
+        },
+        {
+            "id": 16,
+            "name": "Handwriting & Calligraphy",
+            "grade": "Grade 1–2",
+            "category": "Core Academic",
+            "teacher": "Ms. Joyce Wanjiku",
+            "schedule": "Daily, 8:30–9:00 AM",
+            "capacity": 25,
+            "description": "Proper pencil grip, letter formation, and beautiful handwriting practice for early learners.",
+            "skills": [
+                "Fine Motor",
+                "Letter Formation",
+                "Neatness",
+                "Focus"
+            ]
+        }
+    ]
+}
