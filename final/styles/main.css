@@ -95,7 +95,7 @@ p:last-child { margin-bottom: 0; }
   border-radius: 2px;
 }
 
-.btn {
+.djs-btn {
   display: inline-block;
   padding: 0.75rem 1.75rem;
   border-radius: var(--radius);
@@ -108,31 +108,31 @@ p:last-child { margin-bottom: 0; }
   text-align: center;
 }
 
-.btn-primary {
+.djs-btn-primary {
   background: var(--secondary);
   color: #fff;
 }
 
-.btn-primary:hover {
+.djs-btn-primary:hover {
   background: #d07e22;
   color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(232,146,42,0.35);
 }
 
-.btn-outline {
+.djs-btn-outline {
   background: transparent;
   color: var(--primary);
   border: 2px solid var(--primary);
 }
 
-.btn-outline:hover {
+.djs-btn-outline:hover {
   background: var(--primary);
   color: #fff;
   transform: translateY(-2px);
 }
 
-.btn-sm {
+.djs-btn-sm {
   padding: 0.5rem 1.25rem;
   font-size: 0.875rem;
 }
@@ -1085,22 +1085,22 @@ body.dark .form-group textarea { background: #1a2530; border-color: #2e4155; col
    ===================== */
 
 /* Hero ghost button on dark bg */
-.btn-ghost-light {
+.djs-btn-ghost {
   background: rgba(255,255,255,0.15);
   color: #fff;
   border: 2px solid rgba(255,255,255,0.5);
 }
-.btn-ghost-light:hover {
+.djs-btn-ghost:hover {
   background: rgba(255,255,255,0.28);
   color: #fff;
 }
 
 /* Hero outline on dark bg */
-.btn-outline-light {
+.djs-btn-outline-light {
   color: #fff;
   border-color: rgba(255,255,255,0.6);
 }
-.btn-outline-light:hover {
+.djs-btn-outline-light:hover {
   background: rgba(255,255,255,0.15);
   color: #fff;
 }
@@ -1193,7 +1193,7 @@ body.dark .form-group textarea { background: #1a2530; border-color: #2e4155; col
 }
 
 /* Full-width submit button */
-.btn-full {
+.djs-btn-full {
   width: 100%;
 }
 
